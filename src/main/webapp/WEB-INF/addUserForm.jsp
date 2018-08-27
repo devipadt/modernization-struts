@@ -1,5 +1,4 @@
 <!--
-
 Licensed to the Apache Software Foundation (ASF) under one or more
 contributor license agreements. See the NOTICE file distributed with
 this work for additional information regarding copyright ownership.
@@ -14,7 +13,16 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
 -->
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
+<t:layout title="Add User">
+    <t:errorMessage message="${errorMessage}"/>
+
+    <t:form action="addUser">
+        <t:textfield name="id" label="ID" required="true"/>
+        <t:textfield name="firstName" label="First Name" required="true"/>
+        <t:textfield name="lastName" label="Last Name" required="true"/>
+        <t:submit/>
+    </t:form>
+</t:layout>
